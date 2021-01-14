@@ -53,8 +53,6 @@ class _MyHomePageState extends State<MyHomePage>
                   child: Image.network(
                     "https://www.clipartmax.com/png/middle/296-2969961_no-image-user-profile-icon.png",
                     fit: BoxFit.cover,
-                    loadingBuilder: (context, child, loadingProgress) =>
-                        CircularProgressIndicator(),
                   ),
                 ),
                 title: Text("Name"),
@@ -155,6 +153,14 @@ class _MyHomePageState extends State<MyHomePage>
       appBar: AppBar(
         backgroundColor: Color(0xff128C7E),
         title: Text(widget.title),
+        centerTitle: false,
+        actions: [
+          Icon(Icons.search),
+          SizedBox(
+            width: 10,
+          ),
+          Icon(Icons.more_vert),
+        ],
         bottom: PreferredSize(
           preferredSize: Size.fromHeight(30),
           child: TabBar(
